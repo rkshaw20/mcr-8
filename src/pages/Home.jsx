@@ -18,7 +18,6 @@ const Home = () => {
   const { data } = useDataContext();
   const [selectedInput, setSelectedInput] = useState('');
   const [search, setSearch] = useState('');
-  // console.log(data);
 
   const handleSelect = e => {
     setSelectedInput(e.target.value);
@@ -36,7 +35,6 @@ const Home = () => {
       ? searchedData
       : searchedData.filter(({ eventType }) => eventType === selectedInput): searchedData;
 
-  console.log(searchedData);
 
   return (
     <Flex m={2} flexDir="column" h="full" alignItems="center" gap={2}>

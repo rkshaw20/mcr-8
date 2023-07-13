@@ -44,7 +44,6 @@ const EventDetails = () => {
 
   const currentDate= new Date();
   const isCrossed=event.eventEndTime < currentDate;
-  console.log(isCrossed);
   return (
     <Flex m={2} flexDir="column" h="full" alignItems="center" gap={2}>
       <Flex w="full" justifyContent="space-between">
@@ -116,7 +115,7 @@ const EventDetails = () => {
               </Flex>
             ))}
           </Flex>
-          {isCrossed &&           <Button bgColor='red.400' w='fit-content' onClick={ !rsvp ? onOpen: null} >{rsvp? 'Already RSVPed':'RSVP'}</Button>
+          {!isCrossed &&           <Button bgColor='red.400' w='fit-content' onClick={ !rsvp ? onOpen: null} >{rsvp? 'Already RSVPed':'RSVP'}</Button>
 }
           <Modal
         isOpen={isOpen}
