@@ -24,9 +24,9 @@ const EventCard = ({ event }) => {
             <Text m=".2rem">{event.eventType}</Text>
           </Box>
         </Box>
-        <Text> {new Date(event.eventEndTime).toDateString() +
+        <Text> {new Date(event.eventStartTime).toDateString() +
                   " " +
-                  new Date(event.eventEndTime).toLocaleTimeString()}{" "} </Text>
+                  new Date(event.eventStartTime).toLocaleTimeString()}{" "} </Text>
         <Text fontWeight="bold">{event.title}</Text>
       </CardBody>
       </Link>
